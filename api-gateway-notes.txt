@@ -1,3 +1,5 @@
+ZIPKIN - docker run -p 9411:9411 openzipkin/zipkin:2.23
+
 Currency Exchange Service
 http://localhost:8000/currency-exchange/from/USD/to/INR
 

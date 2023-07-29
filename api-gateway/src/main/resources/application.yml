@@ -21,4 +21,4 @@ management:
       probability: 1.0
 logging:
   pattern:
-    level: l- %5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}] #SB3
+    level: -%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}] #SB3
