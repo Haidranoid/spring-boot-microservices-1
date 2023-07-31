@@ -34,7 +34,17 @@ resilience4j:
         limitRefreshPeriod: 10s
 #resilience4j.retry.instances.sample-api.maxRetryAttempts=5 #OLD
 
+# CHANGE-KUBERNETES
 management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
   tracing:
     sampling:
       probability: 1.0

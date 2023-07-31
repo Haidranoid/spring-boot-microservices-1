@@ -1,0 +1,27 @@
+# KUBERNETES
+kubectl create deployment currency-exchange --image=haidranoid/mmv2-currency-exchange-service:0.0.11-SNAPSHOT
+kubectl expose deployment currency-exchange --type=LoadBalancer --port=8000
+
+kubectl get svc
+
+NAME                   TYPE           CLUSTER-IP   EXTERNAL-IP     PORT(S)          AGE
+currency-exchange      LoadBalancer   10.8.4.50    34.135.10.207   8000:31853/TCP   42s
+hello-world-rest-api   LoadBalancer   10.8.6.196   34.121.66.211   8080:32358/TCP   5h3m
+kubernetes             ClusterIP      10.8.0.1     <none>          443/TCP          5h15m
+
+
+# KUBERNETES ENDPOINTS
+http://34.135.10.207:8000/currency-exchange/from/USD/to/INR
+http://34.121.66.211:8100/currency-conversion/from/USD/to/INR/quantity/1000
+http://34.121.66.211:8100/currency-conversion-feign/from/USD/to/INR/quantity/1000
+
+
+# KUBERNETES ASSIGN VARIABLES IN UPPER CASE
+
+currency-exchange
+currency-conversion
+service-name
+
+CURRENCY_EXCHANGE_SERVICE_HOST
+CURRENCY_CONVERSION_SERVICE_HOST
+SERVICE_NAME_SERVICE_HOST
